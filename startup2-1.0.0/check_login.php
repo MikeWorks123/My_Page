@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
     $username = mysqli_real_escape_string($conn, $_POST["username"]);
     $password = mysqli_real_escape_string($conn, $_POST["password"]);
 
-    $sql = "SELECT * FROM users WHERE username = ?";
+    $sql = "SELECT user_id, password FROM users WHERE username = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "s", $username);
     mysqli_stmt_execute($stmt);
@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
 
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['username'] = $username;
+            $_SESSION['user_id'] = $user['user_id']; // Store 'user_id' in the session
             header("Location: index.php");
             exit(); // Always exit after a header redirect
         } else {

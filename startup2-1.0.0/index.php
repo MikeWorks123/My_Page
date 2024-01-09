@@ -101,15 +101,17 @@ session_start();
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
 
                     <?php
-                        // Check if the user is logged in
+                    // Check if the user is logged in
                     if (isset($_SESSION['username'])) {
-                     // If logged in, display the username
-                        echo '<a href="#" class="nav-item nav-link">' . $_SESSION['username'] . '</a>';
-                        } else {
-                     // If not logged in, display the "Login" link
-                            echo '<a href="login.html" class="nav-item nav-link">Login</a>';
-                        }
+                        // If logged in, display the username and generate profile link
+                        $profileLink = 'profile.php?user_id=' . $_SESSION['user_id'];
+                        echo '<a href="' . $profileLink . '" class="nav-item nav-link">' . $_SESSION['username'] . '</a>';
+                    } else {
+                        // If not logged in, display the "Login" link
+                        echo '<a href="login.html" class="nav-item nav-link">Login</a>';
+                    }
                     ?>
+
 
 <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
 </div>
