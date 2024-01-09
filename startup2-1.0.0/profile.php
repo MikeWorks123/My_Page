@@ -36,7 +36,7 @@ if ($result && mysqli_num_rows($result) > 0) {
         <title>Document</title>
     </head>
     <body>
-        Hii
+        Hii subra ka na insen
     </body>
     </html>
 
