@@ -14,6 +14,7 @@
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         
+        $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
         $firstname = filter_input(INPUT_POST, "firstname", FILTER_SANITIZE_SPECIAL_CHARS);
         $lastname = filter_input(INPUT_POST, "lastname", FILTER_SANITIZE_SPECIAL_CHARS);
         $gender = $_POST["gender"];
@@ -35,14 +36,14 @@
             echo "Please enter your number";
         }
         else{
-            $sql = "INSERT INTO users (firstname, lastname, gender, password, email, phone_number)
-                     VALUES ('$firstname', '$lastname', '$gender', '$hash', '$email', '$number')";
+            $sql = "INSERT INTO users (firstname, lastname, gender, password, email, phone_number, username)
+                     VALUES ('$firstname', '$lastname', '$gender', '$hash', '$email', '$number', '$username')";
 
             try{
                 mysqli_query($conn, $sql);
                 // echo "You are now registered!";
-                echo '<script>alert("Data inserted successfully");</script>';
-                header("Location: index.html");
+                // echo '<script>alert("Data inserted successfully");</script>';
+                header("Location: login.html");
                 exit();
             }
             catch(mysqli_sql_exception $e){

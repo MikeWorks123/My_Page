@@ -1,4 +1,6 @@
 <?php
+session_start(); // Place it once at the beginning of your script
+
 $db_server = "localhost";
 $db_user = "root";
 $db_pass = "pillows143";
@@ -14,24 +16,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
     $username = mysqli_real_escape_string($conn, $_POST["username"]);
     $password = mysqli_real_escape_string($conn, $_POST["password"]);
 
-    $sql = "SELECT * FROM users WHERE username = '$username'";
-    $result = mysqli_query($conn, $sql);
+    $sql = "SELECT * FROM users WHERE username = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
 
     if ($result) {
         $user = mysqli_fetch_assoc($result);
 
         if ($user && password_verify($password, $user['password'])) {
-            echo '<script>alert("Login successful");</script>';
-            header("Location: index.html");
+            $_SESSION['username'] = $username;
+            header("Location: index.php");
+            exit(); // Always exit after a header redirect
         } else {
-            
-            header("Location: login.html");
+            mysqli_close($conn); // Close connection before redirection
             echo '<script>alert("Incorrect username or password");</script>';
+            header("Location: login.html");
+            exit();
         }
     } else {
         echo '<script>alert("Error in login");</script>';
     }
 }
 
-mysqli_close($conn);
+mysqli_close($conn); // Close connection if not already closed
 ?>
