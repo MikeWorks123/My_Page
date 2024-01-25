@@ -55,11 +55,9 @@ session_start();
             </div>
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://github.com/MikeWorks123/My_Page/tree/main/startup2-1.0.0"><i class="fab fa-github fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/JM.borja15"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.linkedin.com/in/john-michael-santosidad-4b391116a/"><i class="fab fa-linkedin-in fw-normal"></i></a>
                 </div>
             </div>
         </div>
@@ -70,7 +68,7 @@ session_start();
     <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
+            <a href="index.php" class="navbar-brand p-0">
                 <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>JM FINANCE</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -78,34 +76,24 @@ session_start();
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="detail.html" class="dropdown-item">Blog Detail</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                            <a href="feature.html" class="dropdown-item">Our features</a>
-                            <a href="team.html" class="dropdown-item">Team Members</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="quote.html" class="dropdown-item">Free Quote</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="index.php" class="nav-item nav-link active">Home</a>
+                    <a href="about.php" class="nav-item nav-link">About</a>
+                    <a href="service.php" class="nav-item nav-link">Services</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
 
                     <?php
                     // Check if the user is logged in
                     if (isset($_SESSION['username'])) {
                         // If logged in, display the username and generate profile link
                         $profileLink = 'profile.php?user_id=' . $_SESSION['user_id'];
-                        echo '<a href="' . $profileLink . '" class="nav-item nav-link">' . $_SESSION['username'] . '</a>';
+                        echo '<div class="nav-item dropdown"> 
+                                <a href="' . $profileLink . '" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">' . $_SESSION['username'] . '</a>
+                                <div class="dropdown-menu m-0">
+                                    <a href="profile.php" class="dropdown-item">Profile</a>
+                                    <a href="account_settings.php" class="dropdown-item">Account Settings</a>
+                                    <a href="login.html" class="dropdown-item">Logout</a>
+                                    </div>
+                                </div>';
                     } else {
                         // If not logged in, display the "Login" link
                         echo '<a href="login.html" class="nav-item nav-link">Login</a>';
@@ -125,8 +113,8 @@ session_start();
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
                             <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital Solution</h1>
-                            <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a>
-                            <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+                            <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">BLANK BUTTON</a>
+                            <a href="#" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">BLANK BUTTON</a>
                         </div>
                     </div>
                 </div>
@@ -136,8 +124,8 @@ session_start();
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
                             <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital Solution</h1>
-                            <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a>
-                            <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+                            <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">BLANK BUTTON</a>
+                            <a href="#" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">BLANK BUTTON</a>
                         </div>
                     </div>
                 </div>
@@ -187,7 +175,7 @@ session_start();
                         </div>
                         <div class="ps-4">
                             <h5 class="text-white mb-0">Happy Clients</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">999999</h1>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">0</h1>
                         </div>
                     </div>
                 </div>
@@ -198,7 +186,7 @@ session_start();
                         </div>
                         <div class="ps-4">
                             <h5 class="text-primary mb-0">Projects Done</h5>
-                            <h1 class="mb-0" data-toggle="counter-up">999999</h1>
+                            <h1 class="mb-0" data-toggle="counter-up">10</h1>
                         </div>
                     </div>
                 </div>

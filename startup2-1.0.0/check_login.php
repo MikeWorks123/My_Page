@@ -1,5 +1,5 @@
 <?php
-session_start(); // Place it once at the beginning of your script
+session_start();
 
 $db_server = "localhost";
 $db_user = "root";
