@@ -114,7 +114,7 @@ if ($result && mysqli_num_rows($result) > 0) {
                                 <a href="' . $profileLink . '" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">' . $_SESSION['username'] . '</a>
                                 <div class="dropdown-menu m-0">
                                     <a href="profile.php" class="dropdown-item">Profile</a>
-                                    <a href="account_settings.php" class="dropdown-item">Account Settings</a>
+                                    <a href="#" class="dropdown-item">Account Settings</a>
                                     <a href="login.html" class="dropdown-item">Logout</a>
                                     </div>
                                 </div>';
@@ -131,14 +131,63 @@ if ($result && mysqli_num_rows($result) > 0) {
         <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
             <div class="row py-5">
                 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                    <h1 class="display-4 text-white animated zoomIn">Welcome <?php echo $_SESSION['username']; ?></h1>
+                    <h1 class="display-4 text-white animated zoomIn"> <?php echo $_SESSION['username']; ?>'s Account</h1>
                     <a href="" class="h5 text-white">Home</a>
                     <i class="far fa-circle text-white px-2"></i>
-                    <a href="" class="h5 text-white">Free Quote</a>
+                    <a href="" class="h5 text-white">Account Settings</a>
                 </div>
             </div>
+
+            <div class="container"><center>
+            <div class="card">
+    <div class="card-header">
+        <h5 class="card-title mb-0">Account Details</h5>
+    </div>
+    <div class="card-body">
+        <form id="accountOptionForm" action="process_update_account.php" method="post">
+            <select id="accountOption" class="form-select mb-3">
+                <option selected>--</option>
+                <option value="update">Update Account</option>
+                <option value="deactivate">Deactivate Account</option>
+                <option value="delete">Delete Account</option>
+            </select>
+            <input type="hidden" id="accountOptionField" name="account_option" value="">
+            <button type="button" id="submitOption" class="btn btn-primary">Next</button>
+        </form>
+    </div>
+    <div id="updateAccountFormContainer" style="display: none;">
+        <center>
+            <!-- Form for updating account details -->
+            <form id="updateAccountForm" action="process_update_account.php" method="post">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" value="<?php echo $userDetails['email']; ?>"><br><br>
+
+                <!-- Add more fields as needed -->
+
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+        </center>
+    </div>
+</div>
+
+<script>
+    document.getElementById("submitOption").addEventListener("click", function () {
+        var selectedOption = document.getElementById("accountOption").value;
+        if (selectedOption === "update") {
+            document.getElementById("updateAccountFormContainer").style.display = "block";
+        } else if (selectedOption === "deactivate" || selectedOption === "delete") {
+            // Send the selected option to the server for processing
+            document.getElementById("accountOptionField").value = selectedOption;
+            document.getElementById("accountOptionForm").submit();
+        } else {
+            console.log("nothing");
+        }
+    });
+</script>
+
         </div>
     </div>
+            </div>
     <!-- Navbar End -->
 
 
