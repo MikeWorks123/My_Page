@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (mysqli_stmt_execute($stmt)) {
                 // Deactivation successful
                 echo "Deactivation successful"; // Debug statement
-                header("Location: account_settings.php");
+                header("Location: login.html");
                 exit();
             } else {
                 // Deactivation failed

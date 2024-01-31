@@ -29,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
             if ($user['account_status'] === 'active') {
                 $_SESSION['username'] = $username;
                 $_SESSION['user_id'] = $user['user_id']; // Store 'user_id' in the session
+                echo json_encode(array("status" => "success", "message" => "Account reactivation successful!"));
                 header("Location: index.php");
                 exit();
             } else {
