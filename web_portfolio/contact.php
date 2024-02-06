@@ -162,7 +162,7 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Email me</h5>
-                            <h4 class="text-primary mb-0">jmsantosidad99@example.com</h4>
+                            <h4 class="text-primary mb-0">jmsantosidad99@gmail.com</h4>
                         </div>
                     </div>
                 </div>
@@ -173,7 +173,7 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Complete Address</h5>
-                            <h4 class="text-primary mb-0">1885 Modesto St Malate, Manila, Philippines</h4>
+                            <h4 class="text-primary mb-0">1885 Modesto St Malate, Manila, PH</h4>
                         </div>
                     </div>
                 </div>

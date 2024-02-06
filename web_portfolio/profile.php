@@ -134,7 +134,7 @@ if ($result && mysqli_num_rows($result) > 0) {
                     <h1 class="display-4 text-white animated zoomIn">Welcome <?php echo $_SESSION['username']; ?></h1>
                     <a href="" class="h5 text-white">Home</a>
                     <i class="far fa-circle text-white px-2"></i>
-                    <a href="" class="h5 text-white">Free Quote</a>
+                    <a href="" class="h5 text-white">Profile</a>
                 </div>
             </div>
         </div>
