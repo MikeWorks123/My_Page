@@ -81,7 +81,7 @@ if ($result && mysqli_num_rows($result) > 0) {
             </div>
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://github.com/MikeWorks123/My_Page/tree/main/startup2-1.0.0"><i class="fab fa-github fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://github.com/MikeWorks123"><i class="fab fa-github fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/JM.borja15"><i class="fab fa-facebook-f fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.linkedin.com/in/john-michael-santosidad-4b391116a/"><i class="fab fa-linkedin-in fw-normal"></i></a>
             </div>

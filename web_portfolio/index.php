@@ -55,7 +55,7 @@ session_start();
             </div>
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://github.com/MikeWorks123/My_Page/tree/main/startup2-1.0.0"><i class="fab fa-github fw-normal"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://github.com/MikeWorks123"><i class="fab fa-github fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/JM.borja15"><i class="fab fa-facebook-f fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.linkedin.com/in/john-michael-santosidad-4b391116a/"><i class="fab fa-linkedin-in fw-normal"></i></a>
                 </div>
@@ -111,8 +111,8 @@ session_start();
                     <img class="w-100" src="img/carousel-1.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital Solution</h1>
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Web/App Developer</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Backend Developer</h1>
                             <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">BLANK BUTTON</a>
                             <a href="#" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">BLANK BUTTON</a>
                         </div>
@@ -122,8 +122,8 @@ session_start();
                     <img class="w-100" src="img/carousel-2.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital Solution</h1>
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Backend Developer</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Web/App Developer</h1>
                             <a href="#" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">BLANK BUTTON</a>
                             <a href="#" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">BLANK BUTTON</a>
                         </div>
